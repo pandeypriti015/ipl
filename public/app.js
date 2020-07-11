@@ -204,10 +204,13 @@ function visualizeMatchesPlayedPerYear(matchesPlayedPerYear) {
       enabled: false
     },
     tooltip: {
-      pointFormat: 'Matches'
+      pointFormat: 'Matches',
+      formatter: function() {
+        return 'Matches: <b>' + this.point.y + '</b>';
+    }
     },
     series: [{
-      name: 'Population',
+      name: 'Matches',
       data: seriesData,
   
       dataLabels: {
@@ -215,7 +218,7 @@ function visualizeMatchesPlayedPerYear(matchesPlayedPerYear) {
         rotation: -90,
         color: '#FFFFFF',
         align: 'right',
-        format: '{point.y:.1f}', // one decimal
+        format: '{point.y}', // one decimal
         y: 10, // 10 pixels down from the top
         style: {
           fontSize: '13px',
@@ -283,7 +286,10 @@ function visualizeDataExtraRun(data){
       enabled: false
     },
     tooltip: {
-      pointFormat: 'Runs'
+      pointFormat: 'Runs',
+      formatter: function() {
+        return 'Matches: <b>' + this.point.y + '</b>';
+    }
     },
     series: [{
       name: 'Runs',
@@ -293,7 +299,7 @@ function visualizeDataExtraRun(data){
         rotation: -90,
         color: '#FFFFFF',
         align: 'right',
-        format: '{point.y:.1f}', // one decimal
+        format: '{point.y}', // one decimal
         y: 10, // 10 pixels down from the top
         style: {
           fontSize: '13px',
