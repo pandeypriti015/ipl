@@ -18,12 +18,12 @@ Watch [this tutorial on YouTube](https://www.youtube.com/watch?v=rWboGsc6CqI) if
 
 https://code.visualstudio.com/download
 
-**4: Clone this repository
+**4: Clone this repository**
 ```
 git clone https://gitlab.com/mountblue/propel/ipl
 ```
 
-**5: Install npm packages
+**5: Install npm packages**
 ```
 npm install
 ```
