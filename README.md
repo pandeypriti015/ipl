@@ -21,8 +21,7 @@ https://code.visualstudio.com/download
 **4: Clone this repository**
 
 ```sh
-git clone https://gitlab.com/mountblue/propel/ipl
-```
+https://github.com/pandeypriti015/ipl.git```
 
 **5: Install npm packages**
 
