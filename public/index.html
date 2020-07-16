@@ -9,11 +9,13 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <script src="./app.js"></script>
+    <script src="./showExtraRun.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="IPL visualization">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link href="./styles.css" rel="stylesheet">
+    
     <title>
         IPL visualization
     </title>
@@ -41,14 +43,46 @@
     <div style="margin:50px;box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.1), 0 2px 20px 0 rgba(0,0,0,.2);
     min-width: 310px; height: 500px; ">
         <div id="dhoni-team" style="min-width: 310px; height: 500px; "></div>
-
-
-
     </div>
 
 
 
+    <!-- ----------IPL2----------------------------------------- -->
+    
+    <h3>
+        <b>Select the season to see the extra run given by each team</b>
+    </h3>
+    
+    <select id="seasons1" name="season1">
+    <!-- <button type="button" onclick="showData()">Show</button> -->
+    
+    <option value="2008">2008</option>
+    <option value="2009">2009</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>  
+    </select>
+    <button type="button" onclick="showData()">Show</button>
+    
+
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+    <script src="./app.js"></script>
+    <script  src="./extraRun.json"></script>
+   
+
+    <div style="margin:50px;box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.1), 0 2px 20px 0 rgba(0,0,0,.2);
+    min-width: 310px; height: 500px; "><div id="data-show" style="min-width: 310px; height: 500px; "></div>
 
 
+    </div>
 
 </body>
+</html>
+

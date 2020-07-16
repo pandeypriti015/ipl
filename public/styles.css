@@ -203,3 +203,92 @@ body {
 input[type="number"] {
 	min-width: 50px;
 }
+
+
+
+/* ----------------------IPL2----------------- */
+
+
+/* .search {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  border: 1px solid #d9dde7;
+  border-radius: 5px;
+  margin-left: 30px;
+  padding-left: 15px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.search-bar input {
+  font-weight: 500;
+  border: none;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 30px;
+  color: #949fb7;
+}
+.search-container {
+  background-color: whitesmoke;
+  border-style: solid;
+  border: 3px, grey;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+} */
+
+
+.a{
+  box-shadow: 1px 2px 8px rgba(0,0,0,0.5);
+  padding:15px;
+}
+
+h1{
+  text-align: center;
+}
+button {
+  background-color: whitesmoke;
+  border-style: solid;
+  border: 3px,gray;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  padding:15px 32px;
+  text-align:center;
+  font-weight: bold;
+  display:inline-block;
+  font-size:16px;
+
+}
+
+button:hover {
+  background-color: salmon;
+
+}
+select{
+  background-color: whitesmoke;
+  border-style: solid;
+  border: 3px,gray;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  padding:15px 32px;
+  text-align:center;
+  font-weight: bold;
+  display:inline-block;
+  font-size:16px;
+
+}
+
+/* show data wala */

@@ -1,6 +1,5 @@
 function extraRunPerTeam(match, match1) {
- 
-
+  
     let matchesId = match.reduce((matchId, match) => {
       if (match.season == 2016) {
         matchId.push(match.id)

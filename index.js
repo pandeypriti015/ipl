@@ -5,6 +5,7 @@ const numberOfMatchesperteam = require("./ipl/numberofmatcheswon");
 const extraRun = require('./ipl/extraRun.js');
 const economicalBowlers =require("./ipl/economical");
 const dhoniteam = require("./ipl/dhoni.js");
+const DynamicExtraRun = require('./ipl/dynamicextrarun')
 
 
 const MATCHES_FILE_PATH = "./csv_data/matches.csv";
@@ -14,13 +15,13 @@ const JSON_EXTRARUNS ='./public/extraRun.json';
 const JSON_ECONOMICAL='./public/economicalBowlers.json';
 const JSON_DHONITAEM='./public/dhoni.json';
 const DELIVERIES_FILE_PATH ='./csv_data/deliveries.csv';
-
+const JSON_EXTRA_RUN = './public/extra-run.json';
 
 function main() {
   csv()
     .fromFile(MATCHES_FILE_PATH)
     .then(matches => {
-      console.log(matches)
+     
       let result = matchesPlayedPerYear(matches);
       saveMatchesPlayedPerYear(result);
 
@@ -39,11 +40,14 @@ function main() {
      .then(deliveries => {
        let result_2 = extraRun(matches,deliveries);
        saveExtraRuns(result_2);
+       let result3 = DynamicExtraRun(matches,deliveries)
+       saveExtra_Runs(result3)
+
     });
   csv()
     .fromFile(DELIVERIES_FILE_PATH)
     .then(deliveries => {
-      console.log(deliveries)
+    
       let result_3 = economicalBowlers(matches,deliveries);
       saveeconomicalBowlers(result_3);
 
@@ -81,6 +85,16 @@ function saveExtraRuns(result) {
   
   const jsonString = JSON.stringify(result);
   fs.writeFile(JSON_EXTRARUNS, jsonString, "utf8", err => {
+    if (err) {
+      console.error(err);
+    }
+  });
+}
+
+function saveExtra_Runs(result) {
+  
+  const jsonString = JSON.stringify(result);
+  fs.writeFile(JSON_EXTRA_RUN, jsonString, "utf8", err => {
     if (err) {
       console.error(err);
     }

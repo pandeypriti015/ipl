@@ -94,6 +94,7 @@ function visualizeMatcheswonperteam(data) {
       }
     },
   
+
     series: [{
       name: teamNames[0],
       data: teamArray[0]
@@ -339,7 +340,7 @@ Highcharts.chart('economical-bowlers', {
     type: 'column'
   },
   title: {
-    text: '4.Top 10 economical bowlers in 2015'
+    text: '4.Top 20 economical bowlers in 2015'
   },
 
   xAxis: {
@@ -382,38 +383,6 @@ Highcharts.chart('economical-bowlers', {
   }]
 });
  
-// Highcharts.chart('economical-bowlers',{
-//   chart: {
-//       type: "column"
-//   },
-//     title: {
-//         text: "4.Top economical bowler"
-//     },
-//     xAxis: {
-//         // categories: Object.keys(data),
-//         type: 'category',
-//         allowDecimals: false,
-//         title: {
-//             text: ""
-//         },
-//         labels: {
-//           rotation: -45,
-//           style: {
-//             fontSize: '13px',
-//             fontFamily: 'Verdana, sans-serif'
-//           }
-//         }
-//     },
-//     yAxis: {
-//         title: {
-//             text: "Economy"
-//         }
-//     },
-//     series: [{
-//         name: 'Economy',
-//         data: Object.values(data)
-//     }]
-// }); 
  }
 
 
