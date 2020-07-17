@@ -37,4 +37,6 @@ app.get('/extra-runs', (req, res) => {
         })
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+//app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(process.env.PORT || 5000)
+

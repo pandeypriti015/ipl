@@ -1,6 +1,6 @@
 function showData() {
     const season = document.getElementById("seasons1").value;
-    fetch(`http://localhost:5000/extra-runs?season=${season}`)
+    fetch(`https://ipl-express.herokuapp.com/extra-runs?season=${season}`)
       .then(resp => resp.json())
       .then(response => {
           console.log(response)
