@@ -5,6 +5,8 @@ const csv = require("csvtojson");
 const DynamicExtraRun = require('./ipl/dynamicextrarun')
 const MATCHES_FILE_PATH = "./csv_data/matches.csv";
 const DELIVERIES_FILE_PATH ='./csv_data/deliveries.csv';
+const index = './public/index.html'
+const path = require('path');
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -12,10 +14,10 @@ app.use(function(req, res, next) {
     next();
   });
 
-
-// app.get('/', (req, res) => res.sendFile('index.html', {
-//     root: path.join(__dirname, '../client')
-// }));
+  app.use(express.static('./public'));
+app.get('/', (req, res) => res.sendFile('index.html', {
+    root: path.join(__dirname, './public')
+}));
 
 // app.get('/matchesplayed', (req, res) => res.send(matchesPlayed.numberOfMatches(data)));
 app.get('/extra-runs', (req, res) => {
