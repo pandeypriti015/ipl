@@ -1,13 +1,13 @@
 function showData() {
     const season = document.getElementById("seasons1").value;
-    fetch(`./extra-run.json/`)
+    fetch(`http://localhost:5000/extra-runs?season=${season}`)
       .then(resp => resp.json())
       .then(response => {
           console.log(response)
-          visualizeExtraRuns(response[season]);
+          visualizeExtraRuns(response);
         function visualizeExtraRuns(response) {
           const seriesData = [];
-          for (let team in response) {
+          for (let team in response) {  
             seriesData.push([team, response[team]]);
           }
           Highcharts.chart("data-show", {
