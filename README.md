@@ -1,7 +1,6 @@
-Project URL: https://ipl-express.herokuapp.com/
-
-
 # IPL dataset visualization
+
+Project URL: https://ipl-express.herokuapp.com/
 
 ## Install
 
